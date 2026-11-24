@@ -1,0 +1,15 @@
+# keymap.toml
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = "plugin toggle-pane max-preview"
+desc = "Maximize or restore the preview pane"
+
+[[mgr.prepend_keymap]]
+on   = "Z"
+run  = "plugin toggle-pane max-current"
+desc = "Maximize or restore the current pane"
+
+[[mgr.prepend_keymap]]
+on   = "s"
+run  = "search --via=fd --args='-HI'"
+desc = "Search all files with fd (including hidden and ignored)"

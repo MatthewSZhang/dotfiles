@@ -1,0 +1,17 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+command_timeout = 2000
+scan_timeout = 100
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )]($style)'
+
+[quarto]
+format = '[${symbol}( ${version} )]($style)'
+
+[git_status]
+ignore_submodules = true

@@ -1,0 +1,7 @@
+*
+!.gitignore
+!nvim/
+!nvim/**
+!yazi/
+!yazi/**
+!starship.toml
