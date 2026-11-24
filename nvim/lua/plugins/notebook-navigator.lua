@@ -27,15 +27,13 @@ return {
     dependencies = {
       "nvim-mini/mini.comment",
     },
-    opts = {
-      repl_provider = "molten",
-    },
     keys = {
       -- Cell navigation
       {
         "]g",
         function()
           require("notebook-navigator").move_cell("d")
+          vim.cmd("normal! zz")
         end,
         desc = "Next cell",
       },
@@ -43,6 +41,7 @@ return {
         "[g",
         function()
           require("notebook-navigator").move_cell("u")
+          vim.cmd("normal! zz")
         end,
         desc = "Previous cell",
       },
@@ -59,21 +58,6 @@ return {
         "dah",
         desc = "Delete cell",
         remap = true,
-      },
-      -- Execution
-      {
-        "<localleader>r",
-        function()
-          require("notebook-navigator").run_cell()
-        end,
-        desc = "Run cell",
-      },
-      {
-        "<localleader><cr>",
-        function()
-          require("notebook-navigator").run_and_move()
-        end,
-        desc = "Run cell and move",
       },
     },
   },
