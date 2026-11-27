@@ -28,23 +28,6 @@ return {
       "nvim-mini/mini.comment",
     },
     keys = {
-      -- Cell navigation
-      {
-        "]g",
-        function()
-          require("notebook-navigator").move_cell("d")
-          vim.cmd("normal! zz")
-        end,
-        desc = "Next cell",
-      },
-      {
-        "[g",
-        function()
-          require("notebook-navigator").move_cell("u")
-          vim.cmd("normal! zz")
-        end,
-        desc = "Previous cell",
-      },
       -- Cell editing
       {
         "<localleader>a",

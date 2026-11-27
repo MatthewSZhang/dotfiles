@@ -100,10 +100,19 @@ return {
       desc = "Toggle Breakpoint",
     },
     {
+      "<localleader>is",
+      function()
+        require("ipybridge").plot_open()
+      end,
+      ft = "python",
+      desc = "Open plot history",
+    },
+    {
       "<localleader>ix",
       function()
         require("ipybridge").var_explorer_open()
       end,
+      ft = "python",
       desc = "Open Variable Explorer",
     },
     -- Open preview for variable under cursor (or prompt if none)
@@ -117,6 +126,7 @@ return {
           vim.notify("No variable under cursor", vim.log.levels.WARN)
         end
       end,
+      ft = "python",
       desc = "Preview Variable",
     },
   },
