@@ -5,3 +5,4 @@
 !yazi/
 !yazi/**
 !starship.toml
+.DS_Store
