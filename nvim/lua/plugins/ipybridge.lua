@@ -100,6 +100,22 @@ return {
       desc = "Toggle Breakpoint",
     },
     {
+      "<localleader>iq",
+      function()
+        require("ipybridge").quit_debug()
+      end,
+      ft = "python",
+      desc = "Quit Debugger",
+    },
+    {
+      "<localleader>ic",
+      function()
+        require("ipybridge").debug_continue()
+      end,
+      ft = "python",
+      desc = "Debugger continue",
+    },
+    {
       "<localleader>is",
       function()
         require("ipybridge").plot_open()
